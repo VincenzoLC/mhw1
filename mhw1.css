@@ -1,0 +1,494 @@
+
+body /*Annulla gli spazi tra i tag e il body*/
+{
+    padding:0;
+    margin:0;
+    
+}
+
+
+#nav /*Barra di navigazione che comprende left-center-right*/
+{
+    
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 9%;
+}
+
+#left /*Logo di NOTHING della nav*/
+{
+    display:flex;
+    font-family: doto;
+    font-size: 2em;
+    flex-shrink: 1;
+    margin-left: 0.2vw;
+    padding-left:0.2vw;
+}
+#left a /*link del logo NOTHING*/
+{
+    color:black;
+}
+#right /*Parte di nav dediata alle icone*/
+{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 0.5vw;
+    padding-right: 1vw;
+}
+#center /*Parte di nav dedicata al menu da Desktop*/
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    flex-wrap: wrap; /*Permette agli elementi di occupare le righe successive in mancanza di spazio EXTRA*/ 
+}
+#center a /*Link della nav da Desktop*/
+{
+    text-decoration: none;
+    font-size: large;
+    
+    margin-right: 30px;
+    flex-shrink: 1;
+    text-decoration: none;
+    color:black;
+}
+#center a:hover /*Modifica dei link nella nav al passaggio*/
+{
+    border-bottom: 1px solid lightgray;
+}
+#left a /*Elimina le decorazioni del NOTHING della nav*/
+{
+    text-decoration: none;
+}
+#right img /*Sono le icone della nav right*/
+{
+   width: 40px;
+   height: 40px;
+   object-fit: contain; /*Ridimensiona l'immagine adattandonla al contenitore div*/
+   margin-left: 5px;
+}
+
+#menuIcon /*E' l'icona che compare nei dispositivi mobile*/
+{
+    font-size: 30px;
+    color: black;
+    cursor: pointer; /*Modifica il cursore(diventa mano)*/
+    margin-left: 10px;
+    display:none;
+}
+#mobileMenu  /*E' il menu che appare cliccando l'icona mobile*/
+{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+#mobileMenu a /*Sono i collegamenti(link) del menu mobile*/
+{
+    display:block;
+    text-decoration: none;
+    font-size: large;
+    padding: 20px;
+    color:#000;
+    border-bottom: 1px solid lightgray;
+    width: 100%;
+    
+}
+#mobileMenu a:hover /*Modifica al passaggio del cursore sui link*/
+{
+    cursor: pointer;
+}
+#esclusiva /*E' la sezione sotto la nav, dove compare il messaggio*/
+{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:white;
+    text-align: center;
+    font-family: garamond;
+    height: 50px;
+}
+#esclusiva #next /*Indica la freccia a destra della sezione sotto nav*/
+{
+    padding-right: 20px;
+    padding-left: 20px;
+    font-family: doto;
+    cursor: pointer;
+    
+}
+#esclusiva #prev  /*Indica la freccia a sinistra della sezione sotto nav*/
+{
+    padding-right: 20px;
+    padding-left: 20px;
+    font-family: doto;
+    cursor: pointer;
+    
+}
+#messaggio /*E' l'effettivo messaggio che compare*/
+{
+    flex-wrap: wrap; /*Permette agli elementi di occupare le righe successive in mancanza di spazio*/
+    font-family: 'Times New Roman', Times, serif;
+    font-size: small;
+}
+
+section /*Corpo della pagina web*/
+{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section .divimg /*Sezione della corpo dedicata alle immagini*/
+{
+    width:65%;
+    height: 100%;
+}
+
+section img /*Modifca delle immagini del corpo*/
+{
+    width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+section .divdescr /*Parte della sezione del corpo dedicata alle didascalie*/
+{
+    width:35%;
+    height: 200px;
+    font-family: Noto Sans Thai;
+}
+section .divdescr1 /*Parte della sezione del corpo dedicata alle didascalie(solo la prima)*/
+{
+    width:35%;
+    height: 400px;
+    font-family: Noto Sans Thai;
+}
+section h2 /*Intestazione all'interno di divdescr1 e divdescr*/
+{
+    font-size: 4em;
+    padding:0;
+    margin:20px;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+section p /*Paragrafi all'interno di divdescr1 e divdescr*/
+{
+    margin-left: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+section button /*Bottoni cliccabili all'interno dei div della sezione*/
+{
+    
+    background-color: darkblue;
+    color:white;
+    border:none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; 
+    /*Definisce transizioni per le proprietà specificate: il colore cambia gradualmente e le trasformazioni in maniera graduale */
+    /*Le trasformazioni sono ad esempio: translate,rotate,scale*/
+    margin-left:50px;
+    margin-top:10px;
+    width: 80%;
+    height: 40px;
+    font-size: small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+button:hover /*Modifica al passaggio sul bottone*/
+{
+  cursor: pointer;
+  transform: scale(1.1); /*Ingrandisce in scala l'elemento del 10%*/
+}
+#fine /*Div finale prima del footer*/
+{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30vh;
+}
+#fine #contenitore /*Div che contengono le frasi finali prima del footer*/
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 20vw;
+}
+#fine #contenitore h3 /*Intestazione all'interno di contenitore*/
+{
+    font-size:20px;
+    margin-bottom: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left:5px;
+    
+}
+#fine #contenitore p /*Paragrafi all'interno del contenitore*/
+{
+    font-size: 20px;
+    font-family: Playfair Display;
+    margin-top: 0;
+}
+footer /*Parte finale della pagina*/
+    {
+        width: 100%;
+        height: 600px;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+
+    }
+footer #divtop /*Div superiore del footer*/
+{
+    width: 100%;
+    height: 70%;
+    display:flex;
+    flex-wrap: wrap;
+    
+}
+footer #divtop .box1 /*Il div superiore viene diviso in altri div*/
+{
+    width: 60%;  
+    height: 100%; 
+    display: flex;
+    background-color: #000;
+    justify-content: space-between;
+}
+footer #divtop .box1 ul /*Elenchi presenti nel footer*/
+{
+    list-style: none; /* Rimuove i pallini */
+    margin-right:50px;
+    margin-left: 50px;
+    margin-top:10px;
+    padding:0;
+    color:white;
+    
+}
+.box1  a /*Link degli elenchi*/
+{
+    text-decoration: none;
+    color:white;
+}
+#email /*div che contiene l'input per inserire l'email*/
+{
+    width: 85%;
+    height: 50px;
+    padding:5px;
+    margin-left: 10px;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+footer #divtop .box2 h4  /*Intestazione del box 2(iscriviti alla newsletter)*/
+{
+    margin-left: 10px;
+    color:white;
+}
+#email input /*input per inserire l'email*/
+{
+    width:90%;
+    height: 100%;
+    background-color: #000;
+    color:white;
+    border:none;
+    font-family: doto;
+}
+#email input::placeholder /*testo che appare di default all' input*/ 
+{
+    color:white;
+}
+#email input:focus /*Usato per rimuovere bordi ed effetti al click dell'input*/
+{
+    outline: none;
+    border: none;
+}
+#email button /*Bottone della email(freccia >)*/
+{
+    font-family: doto;
+    width:10%;
+    height:100%;
+    margin:0;
+    background-color: #000;
+    border:none;
+    color:white;
+}
+footer #divtop .box2 /*Box del footer che contiene tutta la parte pagamenti e newsletter*/
+{
+    padding-top:50px;
+    width: 40%;  /* Due colonne */
+    height: 100%; /* Due righe */
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color:#000; 
+}
+
+#pagamenti /*div per le icone di pagamento*/
+{
+    display: flex;
+    align-items: flex-start;
+    padding-top: 10px;
+    margin-right: 10px;
+}
+#pagamenti img /*Immagini icone pagamento*/
+{
+    margin-right: 10px;
+    margin-left:10px;
+    width: 10%;
+   height: 10%;
+   object-fit: cover;
+}
+footer #divbottom /*Div in fondo alla pagina*/
+{
+    background-color:#000;
+    width: 100%;
+    height: 30%;
+    border-top:2px solid white;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+#divbottom div 
+{
+    margin-top:15px;
+    color:white;
+}
+#divbottom div a
+{
+    text-decoration: none;
+}
+#divbottom #end /*div degli ultimi link della pagina*/
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+#divbottom #end2 /*div degli ultimi link della pagina*/
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+#end div
+{
+    margin-right: 40px;
+}
+#end2 div
+{
+    margin-right: 40px;
+}
+#divbottom div img /*Immagini dei social alla fine della pagina*/
+{
+    object-fit: contain;
+    width: 40px;
+    height: 40px;
+    position: static;
+}
+
+@media (max-width: 1000px) 
+{
+    #center {
+        display: none; /* Mostra il menu su desktop */
+    }
+    #mobileMenu
+    {
+        display:none; 
+    }
+
+    #menuIcon {
+        display: flex; /* Nasconde il menu mobile su desktop */
+    }
+    section
+    {
+        flex-direction: column;
+    }
+    section .divimg
+    {
+        width:100%;
+        height: 100vh;
+    }
+    section .divdescr
+    {
+        width: 100%;
+        height: 200px;
+    }
+    section .divdescr1
+    {
+        width: 100%;
+        height: 300px;
+    }
+    #fine
+    {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        height: auto;
+    }
+    #fine #contenitore
+    {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+    }
+    section h2
+    {
+        font-size: 2em;
+    }
+    footer #divtop .box1
+    {
+        flex-wrap: wrap;
+    }
+    #box1 ul,li,h4
+    {
+        font-size: 11px;
+        padding:0;
+        margin:0;
+    }
+    #end
+    {
+        flex-direction: column;
+        margin-left: 5px;
+    }
+    #end2
+    {
+        flex-direction: column;
+    }
+    #end div
+    {
+        font-size: 12px;
+    }
+
+
+}
+@media (min-width: 1000px) 
+{
+    #mobileMenu
+    {
+        display:none;
+    }
+}
+@media (max-width: 500px) 
+{
+    #messaggio
+    {
+        font-size: 10px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+}
